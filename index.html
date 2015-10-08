@@ -4,64 +4,95 @@
 <head>
   <meta charset="utf-8">
   <title>NSS Starter Kit</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li>View Music</li>
-				<li>Add Music</li>
-				<li>Profile</li>
-			</ul>
-		</nav>
-	</header>
-
-	<div>
-		<div id="bluebox">
-			<form>
-				<label>Song length:</label>
-				<input type="slider">
-			</form>
-		</div>
-
-		<div id="yellowbox">
-			<div class="entry">
-				<h1>Ten Years Gone</h1>
+	<div id="container">
+		<header>
+			<nav>
 				<ul>
-					<li>Led Zeppelin</li>
-					<li>Physical Graffiti</li>
-					<li>Rock</li>
+					<a href="#"><li>View Music</li></a>
+					<a href="#"><li>Add Music</li></a>
+					<a href="#"><li>Profile</li></a>
 				</ul>
+			</nav>
+		</header>
+
+		<div id="secondrow">
+			<div id="bluebox">
+				<form>
+					<label for="length">Song length:</label>
+					<input type="number" name="length" step="1" min="0" max="10">
+						<br/>
+					<label for="artist">Artist:</label>
+					<select name="artist">
+						<option>Led Zeppelin</option>
+						<option>Stevie Wonder</option>
+						<option>Kraftwerk</option>
+						<option>Juice Newton</option>
+					</select>
+						<br/>
+					<label for="album">Album:</label>
+					<select name="album">
+						<option>Physical Graffiti</option>
+						<option>Hotter Than July</option>
+						<option>Autobahn</option>
+						<option>Juice</option>
+					</select>
+						<br/>
+					<legend>Genre:</legend>
+					<input type="radio" name="genre" value="genre">Rock
+					<input type="radio" name="genre" value="genre">Pop
+					<input type="radio" name="genre" value="genre">Blues
+					<input type="radio" name="genre" value="genre">Classical
+					<input type="radio" name="genre" value="genre">Jazz
+					<input type="radio" name="genre" value="genre">Hip Hop
+
+					<input type="submit" value="Filter">
+
+				</form>
 			</div>
 
-			<div class="entry">
-				<h1>Master Blaster (Jammin')</h1>
-				<ul>
-					<li>Stevie Wonder</li>
-					<li>Hotter Than July</li>
-					<li>R&B</li>
-				</ul>
-			</div>
+			<div id="yellowbox">
+				<div class="entry">
+					<h1>Ten Years Gone</h1>
+					<ul>
+						<li>Led Zeppelin</li>
+						<li>Physical Graffiti</li>
+						<li>Rock</li>
+					</ul>
+				</div>
 
-			<div class="entry">
-				<h1>Autobahn</h1>
-				<ul>
-					<li>Kraftwerk</li>
-					<li>Autobahn</li>
-					<li>Electronic</li>
-				</ul>
-			</div>
+				<div class="entry">
+					<h1>Master Blaster (Jammin')</h1>
+					<ul>
+						<li>Stevie Wonder</li>
+						<li>Hotter Than July</li>
+						<li>R&B</li>
+					</ul>
+				</div>
 
-			<div class="entry">
-				<h1>Queen of Hearts</h1>
-				<ul>
-					<li>Juice Newton</li>
-					<li>Juice</li>
-					<li>Country</li>
-				</ul>
-			</div>
+				<div class="entry">
+					<h1>Autobahn</h1>
+					<ul>
+						<li>Kraftwerk</li>
+						<li>Autobahn</li>
+						<li>Electronic</li>
+					</ul>
+				</div>
 
+				<div class="entry">
+					<h1>Queen of Hearts</h1>
+					<ul>
+						<li>Juice Newton</li>
+						<li>Juice</li>
+						<li>Country</li>
+					</ul>
+				</div>
+
+			</div>
 		</div>
 	</div>
 
