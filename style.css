@@ -103,6 +103,10 @@ input[type="submit"] {
 	margin-top: 20px;
 }
 
+.buttoncenter {
+	text-align: center;
+}
+
 input[type="radio"] {
 	margin-right: 10px;
 }
