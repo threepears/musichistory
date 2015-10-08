@@ -5,7 +5,6 @@ html {
 }
 
 body {
-  background-color: silver;
   font-family: Tahoma, Helvetica, sans-serif;
 }
 
@@ -69,6 +68,7 @@ a:hover, a:active {
 	width: 40%;
 	height: 424px;
 	float: left;
+	border: 2px solid #000;
 }
 
 fieldset {
@@ -103,11 +103,24 @@ input[type="submit"] {
 	margin-top: 20px;
 }
 
+input[type="radio"] {
+	margin-right: 10px;
+}
+
+#column1 {
+	float: left;
+}
+
+#column2 {
+	margin-left: 50%;
+}
+
 #yellowbox {
 	background-color: #FEFAC0;
 	padding: 2%;
-	width: 52%;
-	margin-left: 44%;
+	width: 49%;
+	margin-left: 46.5%;
+	border: 2px solid #000;
 }
 
 .entry {
