@@ -23,34 +23,39 @@
 		<div id="secondrow">
 			<div id="bluebox">
 				<form>
-					<label for="length">Song length:</label>
-					<input type="number" name="length" step="1" min="0" max="10">
-						<br/>
-					<label for="artist">Artist:</label>
-					<select name="artist">
-						<option>Led Zeppelin</option>
-						<option>Stevie Wonder</option>
-						<option>Kraftwerk</option>
-						<option>Juice Newton</option>
-					</select>
-						<br/>
-					<label for="album">Album:</label>
-					<select name="album">
-						<option>Physical Graffiti</option>
-						<option>Hotter Than July</option>
-						<option>Autobahn</option>
-						<option>Juice</option>
-					</select>
-						<br/>
-					<legend>Genre:</legend>
-					<input type="radio" name="genre" value="genre">Rock
-					<input type="radio" name="genre" value="genre">Pop
-					<input type="radio" name="genre" value="genre">Blues
-					<input type="radio" name="genre" value="genre">Classical
-					<input type="radio" name="genre" value="genre">Jazz
-					<input type="radio" name="genre" value="genre">Hip Hop
+					<fieldset>
+						<label for="length">Song length:</label>
+						<input type="range" name="length" step="0.10" min="0" max="10" value="5">
+					</fieldset>
+					<fieldset>
+						<label for="artist">Artist:</label>
+						<select name="artist">
+							<option>Led Zeppelin</option>
+							<option>Stevie Wonder</option>
+							<option>Kraftwerk</option>
+							<option>Juice Newton</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<label for="album">Album:</label>
+						<select name="album">
+							<option>Physical Graffiti</option>
+							<option>Hotter Than July</option>
+							<option>Autobahn</option>
+							<option>Juice</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<legend>Genre:</legend>
+						<input type="radio" name="genre" value="genre">Rock
+						<input type="radio" name="genre" value="genre">Pop
+						<input type="radio" name="genre" value="genre">Blues
+						<input type="radio" name="genre" value="genre">Classical
+						<input type="radio" name="genre" value="genre">Jazz
+						<input type="radio" name="genre" value="genre">Hip Hop
+					</fieldset>
 
-					<input type="submit" value="Filter">
+					<input type="submit" value="FILTER">
 
 				</form>
 			</div>

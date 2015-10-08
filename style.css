@@ -11,9 +11,9 @@ body {
 
 h1 {
 	color: #785616;
-	margin-top: 0;
+	margin: 0 0 5px 0;
 }
-
+	
 #container {
 	width: 80%;
 	margin: 0 auto;
@@ -25,13 +25,20 @@ header {
 	padding: 10px;
 	border-radius: 10px;
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+	border: 2px solid #000;
 }
 
-nav ul, ul {
+#yellowbox ul {
+	padding: 0;
+	margin-top: 0;
+}
+
+nav ul {
 	padding: 0 2%;
 }
 
-nav a:last-child li {
+nav a:last-child li,
+.entry li:last-child {
 	border-right: 0;
 }
 
@@ -45,7 +52,7 @@ nav li, li {
 }
 
 a:link, a:visited {
-	color: #000	;
+	color: #ff6666;
 }
 
 a:hover, a:active {
@@ -60,13 +67,57 @@ a:hover, a:active {
 	background-color: #4DD7FA;
 	padding: 2%;
 	width: 40%;
+	height: 424px;
 	float: left;
+}
+
+fieldset {
+	border: 0;
+	border-bottom: 1px solid #006699;
+	padding: 20px 0;
+}
+
+form fieldset:first-child {
+	padding-top: 0;
+}
+
+legend {
+	padding-top: 20px;
+}
+
+label {
+	margin-right: 5px;
+}
+
+label, legend {
+	font-weight: bold;
+}
+
+input[type="submit"] {
+	background-color: #006699;
+	color: #fff;
+	font-size: 1.2em;
+	border: 2px solid #fff;
+	padding: 5px 10px;
+	border-radius: 10px;
+	margin-top: 20px;
 }
 
 #yellowbox {
 	background-color: #FEFAC0;
-	padding: 2% 0 0 3%;
+	padding: 2%;
 	width: 52%;
 	margin-left: 44%;
 }
 
+.entry {
+	margin-bottom: 20px;
+	padding: 10px 0 0 20px;
+	background-color: rgba(120, 86, 22, 0.2);
+	border-radius: 10px;
+	border: 1px solid rgba(120, 86, 22, 0.4);
+}
+
+#yellowbox div.entry:last-child {
+	margin-bottom: 0;
+}
