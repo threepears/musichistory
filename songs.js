@@ -13,12 +13,22 @@ songs.push("Boy Named Sue > by Johnny Cash on the album Live From Folsom Prison"
 //Print new result to console
 console.log(songs);
 
+output = document.getElementById("test");
+
+console.log(output);
+
 for (var i = 0; i < songs.length; i++) {
 	song = songs[i];
 	console.log(song);
 
 	var newsong = song.replace(/[*@!()]/g, "").replace(">", "-");
 	songs[i] = newsong;
+
+	var newentry = "<div>" + songs[i] + "</div><br/>";
+	console.log(newentry);
+	output.innerHTML = output.innerHTML + newentry;
+	console.log(output.innerHTML);
 }
+
 
 console.log(songs);
