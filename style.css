@@ -93,6 +93,15 @@ label, legend {
 	font-weight: bold;
 }
 
+output {
+	margin-left: 5px;
+	width: 30px;
+	padding: 5px 8px;
+	border: 1px solid #006699;
+	text-align: center;
+	display: inline-block;
+}
+
 input[type="submit"] {
 	background-color: #006699;
 	color: #fff;

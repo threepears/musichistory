@@ -25,7 +25,8 @@
 				<form>
 					<fieldset>
 						<label for="length">Song length:</label>
-						<input type="range" name="length" step="0.10" min="0" max="10" value="5">
+						<input type="range" name="length" step="0.1" min="0.0" max="10.0" value="0.0" oninput="counter.value=length.value">
+						<output for="length" name="counter">0.0</output>
 					</fieldset>
 					<fieldset>
 						<label for="artist">Artist:</label>
