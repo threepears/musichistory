@@ -1,3 +1,15 @@
+function equalBoxes() {
+	var yellow = document.getElementById("yellowbox");
+	var blue = document.getElementById("bluebox");
+	console.log(blue.offsetHeight);
+
+	if (yellow.offsetHeight > blue.offsetHeight) {
+		blue.style.height = yellow.offsetHeight + "px";
+	} else if (blue.offsetHeight > yellow.offsetHeight) {
+		yellow.style.height = blue.offsetHeight + "px";
+	}
+};
+
 var songs = [];
 
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
@@ -30,5 +42,6 @@ for (var i = 0; i < songs.length; i++) {
 	console.log(output.innerHTML);
 }
 
+equalBoxes();
 
 console.log(songs);

@@ -27,7 +27,6 @@ header {
 	border-top: 0;
 	width: 80%;
 	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
-	flex: 100%;
 	text-align: center;
 }
 
@@ -44,36 +43,34 @@ nav ul {
 	padding: 0 2%;
 }
 
-nav a:last-child li,
+/*nav a:last-child li,
 .entry li:last-child {
 	border-right: 0;
-}
+}*/
 
 nav li, li {
 	list-style-type: none;
 	display: inline-block;
-	margin-right: 20px;
-	font-weight: bold;
+/*	margin-right: 20px;
 	padding-right: 20px;
-	border-right: 1px solid #000;
+	border-right: 1px solid #000;*/
+	font-weight: bold;
 }
 
 a:link, a:visited {
 	color: #ff6666;
+	padding: 16px 20px;
+	margin: 0;
+	transition: 1s;
 }
 
 a:hover, a:active {
 	color: #fff;
+	background-color: rgba(255,102,102,0.4);
+	padding: 16px 30px;
 }
 
 #secondrow {
-}
-
-.flex-container {
-	-webkit-flex-direction: row;
-	-webkit-flex-wrap: wrap;
-	display: flex;
-
 }
 
 #bluebox {
@@ -81,8 +78,8 @@ a:hover, a:active {
 	padding: 2%;
 	border: 2px solid #000;
 	border-top: 0;
-	flex-grow: 4;
-	width: 100px;
+	width: 35%;
+	float: left;
 }
 
 fieldset {
@@ -148,8 +145,8 @@ input[type="radio"] {
 	border: 2px solid #000;
 	border-top: 0;
 	border-left: 0;
-	flex-grow: 6;
-	width: 100px;
+	width: 56.3%;
+	margin-left: 39.4%;
 }
 
 .entry {
@@ -158,6 +155,17 @@ input[type="radio"] {
 	background-color: rgba(120, 86, 22, 0.2);
 	border-radius: 10px;
 	border: 1px solid rgba(120, 86, 22, 0.4);
+}
+
+.entry > div {
+	opacity: 0.3;
+	cursor: pointer;
+	transition: 1s;
+}
+
+.entry > div:hover {
+	opacity: 1.0;
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
 }
 
 .entry :nth-child(2n+0) {
