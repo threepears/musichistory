@@ -4,7 +4,9 @@ function equalBoxes() {
 	console.log(blue.offsetHeight);
 
 	if (yellow.offsetHeight > blue.offsetHeight) {
-		blue.style.height = yellow.offsetHeight + "px";
+		console.log(yellow.offsetHeight);
+		console.log(blue.offsetHeight);
+		blue.style.height = (yellow.offsetHeight - 30) + "px";
 	} else if (blue.offsetHeight > yellow.offsetHeight) {
 		yellow.style.height = blue.offsetHeight + "px";
 	}
