@@ -6,29 +6,48 @@
   <title>NSS Starter Kit</title>
 
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-	<div id="container">
-		<header>
-			<nav>
-				<ul>
-					<a href="#"><li>List Music</li></a>
-					<a href="#"><li>Add Music</li></a>
-					<a href="#"><li>Profile</li></a>
-				</ul>
-			</nav>
-		</header>
+	
+	<header>
+		<div id="headerwrapper">
+			<div id="logo">
+				MUSICTRACKER2000
+			</div>
+			<div id="topnav">
+				<nav>
+					<ul>
+						<a href="#"><li>List Music</li></a>
+						<a href="#" id="addmusic"><li>Add Music</li></a>
+						<a href="#"><li>Profile</li></a>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
 
-		<header class="hidden">
-			<nav>
-				<ul>
-					<a href="#"><li>List Music</li></a>
-					<a href="#"><li>Add Music</li></a>
-					<a href="#"><li>Profile</li></a>
-				</ul>
-			</nav>
-		</header>
+
+	<div id="container">
+
+		<div id="infosubmit">
+			<fieldset>
+				<legend>ENTER NEW INFORMATION HERE</legend>
+				<div id="submit-box">
+					<label for="artist">Enter Artist Name:</label>
+					<input type="text" name="artist" id="artist">
+					<p>
+						<label for="song">Enter Song Name:</label>
+						<input type="text" name="song" id="song">
+					</p>
+					<p>
+						<label for="album">Enter Album Name:</label>
+						<input type="text" name="album" id="album">
+					</p>
+				</div>
+			</fieldset>
+		</div>
 
 		<div id="secondrow">	
 			<div id="bluebox">
@@ -79,7 +98,7 @@
 
 			<div id="yellowbox">
 				<div id="test" class="entry">
-<!-- 					<h1>Ten Years Gone</h1>
+					<h1>Ten Years Gone</h1>
 					<ul>
 						<li>Led Zeppelin</li>
 						<li>Physical Graffiti</li>
@@ -111,23 +130,15 @@
 						<li>Juice Newton</li>
 						<li>Juice</li>
 						<li>Country</li>
-					</ul> -->
+					</ul>
 				</div>
 			</div>
 		</div>
-
-		<footer>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac vehicula lacus. Duis rhoncus nisi condimentum, posuere ante sit amet, consequat nunc. Phasellus tristique turpis id diam vehicula dictum. Ut sodales sapien nulla, a rhoncus felis commodo nec. Aenean auctor mi nisl, porttitor tincidunt lorem blandit ut. Quisque laoreet pharetra libero id feugiat. Nunc ut augue porta, condimentum lorem a, blandit arcu. Sed ut lorem et odio tristique blandit eu at velit. Nulla viverra vulputate nibh, in sollicitudin ante scelerisque nec. Aliquam feugiat egestas nulla. Etiam sagittis finibus dapibus. Ut malesuada velit ut consequat consectetur. Integer vehicula, lectus a posuere lacinia, mauris purus vestibulum tortor, fermentum dictum est massa vel nunc. Maecenas consequat, turpis quis aliquam dapibus, leo mauris varius sem, non tempor ex velit id urna.
-
-			Maecenas gravida fermentum ipsum, quis rhoncus orci dapibus quis. Vestibulum non erat quis mauris tristique hendrerit. Nunc aliquet dui tincidunt elementum tempor. Aliquam non enim sed ligula ornare commodo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse id erat magna. Morbi elementum mauris quis ex posuere vehicula. Aenean aliquet ex libero, eget commodo quam efficitur vel. Donec volutpat sodales libero hendrerit facilisis.
-
-			Nunc nec leo sodales leo maximus mattis. Fusce sem ipsum, laoreet ut est quis, vestibulum condimentum augue. Pellentesque ipsum mi, aliquam ac rutrum a, accumsan pharetra tortor. Nam quis tortor nec neque ullamcorper posuere a eleifend leo. Aenean felis nunc, sollicitudin eu bibendum in, vulputate vel leo. Proin molestie commodo tellus. Donec nibh ipsum, pulvinar non nisl eu, porttitor lobortis nisi. Integer sagittis, velit non vehicula congue, elit odio congue erat, ac vehicula ante lacus vel purus. Praesent tempor interdum pellentesque.
-
-			Mauris nec leo et nulla venenatis efficitur. Proin molestie lectus vel lobortis dictum. Maecenas fermentum ante libero, et molestie neque cursus ac. Mauris sed pellentesque massa, a facilisis neque. Sed ligula nibh, varius quis justo vel, faucibus varius metus. Sed gravida mollis orci mattis luctus. Nullam nibh elit, volutpat at est in, auctor eleifend leo. Vestibulum porta, risus nec varius posuere, arcu libero tristique elit, sed maximus erat mauris ac metus. In a laoreet ligula. Morbi odio ex, scelerisque pretium mattis at, rutrum nec nisl. Aliquam elementum consectetur sapien. Ut vulputate odio justo, eu accumsan est sagittis tincidunt. Morbi imperdiet varius neque vel tincidunt. Fusce laoreet non lorem vel egestas.
-
-			Sed tristique lorem a arcu scelerisque ullamcorper non quis neque. Vestibulum viverra eros non dictum volutpat. Nam vehicula lacus sed sollicitudin congue. Suspendisse tempor urna id aliquam faucibus. Fusce fringilla turpis a lacus ornare auctor. Sed viverra suscipit mi, a vulputate libero. Suspendisse potenti. Praesent nec fringilla est. Fusce tempus risus non ultrices egestas. Vivamus sed turpis vel nisi dignissim dignissim. Proin tempor lacus sed enim posuere pharetra vel id justo. Aliquam urna nunc, suscipit quis ex ut, bibendum malesuada tellus. Donec ex nibh, rutrum eget ultricies vitae, tincidunt vitae neque. In non ullamcorper diam, id tincidunt urna. Phasellus interdum orci ac erat congue, sit amet consectetur dolor pretium. Duis sem quam, blandit vel porta a, aliquam faucibus dolor.
-		</footer>
 	</div>
+
+	<footer>
+		&copy;2015 <a href="http://nashvillesoftwareschool.com/" target="_blank">Nashville Software School</a> &nbsp;&bull;&nbsp; Page by Michael Conrad
+	</footer>
 
 
 	<script src="songs.js"></script>

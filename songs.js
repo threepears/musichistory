@@ -12,7 +12,7 @@ function equalBoxes() {
 	}
 };
 
-var songs = [];
+/*var songs = [];
 
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
 songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
@@ -42,8 +42,20 @@ for (var i = 0; i < songs.length; i++) {
 	console.log(newentry);
 	output.innerHTML = output.innerHTML + newentry;
 	console.log(output.innerHTML);
-}
+}*/
 
 equalBoxes();
 
-console.log(songs);
+var infobox = document.getElementById("infosubmit");
+var main = document.getElementById("secondrow");
+
+document.getElementById("addmusic").addEventListener("click", function() {
+	infobox.classList.add("appear");
+	main.classList.add("disappear");
+});
+
+
+
+
+
+

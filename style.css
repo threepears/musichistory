@@ -7,6 +7,7 @@ html {
 body {
   font-family: Tahoma, Helvetica, sans-serif;
   margin: 0;
+  background-color: #a30000;
 }
 
 h1 {
@@ -17,43 +18,48 @@ h1 {
 #container {
 	width: 80%;
 	margin: 0 auto;
-	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+	padding-top: 6%;
 }
 
 header {
-	background-color: #FFB4B0;
+	background-color: #000;
+	color: #fff;
 	position: fixed;
 	top: 0;
-	border-top: 0;
-	width: 80%;
+	width: 100%;
 	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
-	text-align: center;
 }
 
-#yellowbox ul {
-	padding: 0;
-	margin-top: 0;
+#headerwrapper {
+	width: 80%;
+	margin: 0 auto;
 }
 
-nav {
-	border: 2px solid #000;
+#logo {
+	float: left;
+	margin: 1em 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	font-size: 1.2em;
+}
+
+#topnav {
+	float: right;
 }
 
 nav ul {
-	padding: 0 2%;
+	padding: 0;
+	margin: 1.3em 0;
 }
 
-/*nav a:last-child li,
-.entry li:last-child {
-	border-right: 0;
-}*/
+nav a:last-child li {
+	padding-right: 20px;
+}
 
 nav li, li {
 	list-style-type: none;
 	display: inline-block;
-/*	margin-right: 20px;
-	padding-right: 20px;
-	border-right: 1px solid #000;*/
+	text-align: right;
 	font-weight: bold;
 }
 
@@ -67,10 +73,52 @@ a:link, a:visited {
 a:hover, a:active {
 	color: #fff;
 	background-color: rgba(255,102,102,0.4);
-	padding: 16px 30px;
 }
 
-#secondrow {
+#infosubmit {
+	background-color: #660000;
+	border: 8px solid #3d0000;
+	box-shadow: inset 0 0 10px #000;
+	border-radius: 10px;
+	text-align: center;
+	color: #fff;
+	font-size: 2em;
+	padding: 2%;
+	position: relative;
+	display: none;
+}
+
+#infosubmit.appear {
+	display: block;
+}
+
+#infosubmit > fieldset {
+	padding-bottom: 0;
+}
+
+#submit-box {
+	background-color: #4c0000;
+	border: 1px solid #1a0000;
+	border-radius: 10px;
+	padding: 4%;
+	margin-top: 2%;
+}
+
+#submit-box :last-child {
+	margin-bottom: 0;
+}
+
+#submit-box label {
+	font-size: 0.8em;
+}
+
+#submit-box input {
+	font-size: 1.2em;
+	padding-left: 1%;
+}
+
+#secondrow.disappear {
+	display: none;
 }
 
 #bluebox {
@@ -84,8 +132,12 @@ a:hover, a:active {
 
 fieldset {
 	border: 0;
-	border-bottom: 1px solid #006699;
 	padding: 20px 0;
+}
+
+fieldset > input {
+	font-size: 1.5em;
+	margin: 2% 0;
 }
 
 form fieldset:first-child {
@@ -94,6 +146,9 @@ form fieldset:first-child {
 
 legend {
 	padding-top: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: goldenrod;
+	text-shadow: 0 1px 1px #000;
 }
 
 label {
@@ -147,6 +202,11 @@ input[type="radio"] {
 	border-left: 0;
 	width: 56.3%;
 	margin-left: 39.4%;
+}
+
+#yellowbox ul {
+	padding: 0;
+	margin-top: 0;
 }
 
 #secondrow {
@@ -206,5 +266,25 @@ input[type="radio"] {
 }
 
 footer {
+	background-color: #000;
+	color: #fff;
+	width: 100%;
+	font-size: 0.8em;
+	text-align: center;
 	padding: 20px;
+}
+
+footer > a:link,
+footer > a:visited {
+	transition: 1s;
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+footer > a:hover,
+footer > a:active {
+	color: goldenrod;
 }
