@@ -1,4 +1,4 @@
-function equalBoxes() {
+/*function equalBoxes() {
 	var yellow = document.getElementById("yellowbox");
 	var blue = document.getElementById("bluebox");
 	console.log(blue.offsetHeight);
@@ -10,7 +10,7 @@ function equalBoxes() {
 	} else if (blue.offsetHeight > yellow.offsetHeight) {
 		yellow.style.height = blue.offsetHeight + "px";
 	}
-};
+};*/
 
 /*var songs = [];
 
@@ -44,21 +44,74 @@ for (var i = 0; i < songs.length; i++) {
 	console.log(output.innerHTML);
 }*/
 
-equalBoxes();
+/*equalBoxes();*/
 
-var infobox = document.getElementById("infosubmit");
-var main = document.getElementById("secondrow");
 
-document.getElementById("listmusic").addEventListener("click", function() {
-	infobox.classList.remove("appear");
-	main.classList.remove("disappear");
+$(document).ready(function() {
+  // All the JavaScript that depends on jQuery will be written here
+
+  	// Declare all variables
+	var infobox = $("#infosubmit");
+	var main = $("#secondrow");
+	var yellowBox = $("#yellowbox");
+	var artist = $("#artist");
+	var song = $("#song");
+	var album = $("#album");
+	var songList = [];
+
+	// Function to print song list
+	function printSongs() {
+		yellowBox.html("");
+
+		for (var i = 0; i < songList.length; i++) {
+			var songEntry = "<div class='entry'>";
+			songEntry += "<h1>" + songList[i][1] + "</h1>";
+			songEntry += "<ul>";
+			songEntry += "<li>" + songList[i][0] + "</li>&nbsp; | &nbsp;";
+			songEntry += "<li>" + songList[i][2] + "</li>";
+			songEntry += "</ul>";      
+			songEntry += "</div>";	
+
+			console.log(songEntry);
+	
+			yellowBox.append(songEntry);
+		}
+	}
+
+	// Remove and add classes to show and hide main content
+	$("#listmusic").click(function() {
+		infobox.removeClass("appear");
+		main.removeClass("disappear");
+	});
+
+	$("#addmusic").click(function() {
+		infobox.addClass("appear");
+		main.addClass("disappear");
+	});
+
+	// Add songs to list
+	$("#addtolist").click(function() {
+		infobox.removeClass("appear");
+		main.removeClass("disappear");
+
+		songList.push([artist.val(),song.val(),album.val()]);
+		artist.val("");
+		song.val("");
+		album.val("");
+
+		console.log(songList);
+
+		printSongs();
+	});
+
+	$(document).keyup(function (e) {
+    var key = e.which || e.keyCode;
+    	if (key === 13) {
+        $("#addtolist").click();
+      }
 });
 
-document.getElementById("addmusic").addEventListener("click", function() {
-	infobox.classList.add("appear");
-	main.classList.add("disappear");
 });
-
 
 
 

@@ -36,7 +36,7 @@
 				<legend>ENTER NEW INFORMATION HERE</legend>
 				<div id="submit-box">
 					<label for="artist">Enter Artist Name:</label>
-					<input type="text" name="artist" id="artist">
+					<input type="text" name="artist" id="artist" autofocus>
 					<p>
 						<label for="song">Enter Song Name:</label>
 						<input type="text" name="song" id="song">
@@ -45,12 +45,13 @@
 						<label for="album">Enter Album Name:</label>
 						<input type="text" name="album" id="album">
 					</p>
+					<button type="button" id="addtolist">ADD INFORMATION</button>
 				</div>
 			</fieldset>
 		</div>
 
 		<div id="secondrow">	
-			<div id="bluebox">
+			<div id="redbox">
 				<form>
 					<fieldset>
 						<label for="length">Song length:</label>
@@ -76,7 +77,7 @@
 						</select>
 					</fieldset>
 					<fieldset>
-						<legend>Genre:</legend>
+						<legend>GENRE:</legend>
 						<div id="column1">
 							<input type="radio" name="genre" value="genre">Rock<br/>
 							<input type="radio" name="genre" value="genre">Pop<br/>
@@ -97,7 +98,7 @@
 			</div>
 
 			<div id="yellowbox">
-				<div id="test" class="entry">
+<!-- 				<div class="entry">
 					<h1>Ten Years Gone</h1>
 					<ul>
 						<li>Led Zeppelin</li>
@@ -131,7 +132,7 @@
 						<li>Juice</li>
 						<li>Country</li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -140,7 +141,7 @@
 		&copy;2015 <a href="http://nashvillesoftwareschool.com/" target="_blank">Nashville Software School</a> &nbsp;&bull;&nbsp; Page by Michael Conrad
 	</footer>
 
-
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="songs.js"></script>
 
 </body>
