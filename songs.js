@@ -49,6 +49,11 @@ equalBoxes();
 var infobox = document.getElementById("infosubmit");
 var main = document.getElementById("secondrow");
 
+document.getElementById("listmusic").addEventListener("click", function() {
+	infobox.classList.remove("appear");
+	main.classList.remove("disappear");
+});
+
 document.getElementById("addmusic").addEventListener("click", function() {
 	infobox.classList.add("appear");
 	main.classList.add("disappear");
