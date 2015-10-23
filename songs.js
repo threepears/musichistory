@@ -78,6 +78,7 @@ $(document).ready(function() {
 		}
 	}
 
+
 	// Remove and add classes to show and hide main content
 	$("#listmusic").click(function() {
 		infobox.removeClass("appear");
@@ -91,15 +92,18 @@ $(document).ready(function() {
 
 	// Add songs to list
 	$("#addtolist").click(function() {
-		infobox.removeClass("appear");
-		main.removeClass("disappear");
-
 		songList.push([artist.val(),song.val(),album.val()]);
 		artist.val("");
 		song.val("");
 		album.val("");
 
 		console.log(songList);
+	});
+
+	// Close input box
+	$("#closebox").click(function() {
+		infobox.removeClass("appear");
+		main.removeClass("disappear");
 
 		printSongs();
 	});
