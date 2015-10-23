@@ -113,9 +113,23 @@ $(document).ready(function() {
     	if (key === 13) {
         $("#addtolist").click();
       }
-});
+	});
+
+	$(document).on("click", ".delete", function(e) {
+		e.target.parentNode.remove();
+	});
 
 });
+
+
+
+
+
+
+
+
+
+
 
 
 

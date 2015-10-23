@@ -239,7 +239,7 @@ input[type="radio"] {
 
 #yellowbox {
 	background-color: #daa520;
-	padding: 2%;
+	padding: 2% 2% 8%;
 	border: 4px solid #785616;
 	border-radius: 10px;
 	width: 56%;
@@ -247,6 +247,7 @@ input[type="radio"] {
 	margin-left: 2.5%;
 	box-shadow: inset 0 0 10px #000;
 	display: inline-block;
+	position: relative;
 }
 
 #yellowbox ul {
@@ -276,6 +277,14 @@ input[type="radio"] {
 	font-weight: bold;
 }
 
+.delete {
+	float: right;
+	margin-top: 5px;
+	color: #fff;
+	background-color: red;
+	cursor: pointer;
+}
+
 /*#yellowbox div.entry:last-child {
 	margin-bottom: 0;
 }*/
@@ -287,6 +296,21 @@ input[type="radio"] {
 .hidden {
 	visibility: hidden;
 	position: static;
+}
+
+#more {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 100%;
+	text-align: right;
+}
+
+#morebutton {
+	margin: 10px;
+	color: #fff;
+	background-color: red;
+	cursor: pointer;
 }
 
 footer {
