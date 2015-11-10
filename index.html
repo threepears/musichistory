@@ -5,28 +5,44 @@
   <meta charset="utf-8">
   <title>Music History App</title>
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="./lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	
 	<header>
-		<div id="headerwrapper">
-			<div id="logo">
+
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <div id="logo">
+		      	<span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
 				MUSICTRACKER2000
-			</div>
-			<div id="topnav">
-				<nav>
-					<ul>
-						<a href="#" id="listmusic"><li>List Music</li></a>
-						<a href="#" id="addmusic"><li>Add Music</li></a>
-						<a href="#" id="profile"><li>Profile</li></a>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</header>
+			  </div>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		            <a href="#" id="listmusic"><li class="active">List Music</li></a>
+					<a href="#" id="addmusic"><li>Add Music</li></a>
+					<a href="#" id="profile"><li>Profile</li></a>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+
+		  </div><!-- /.container-fluid -->
+		</nav>
 
 
 	<div id="container">
@@ -34,16 +50,26 @@
 			<fieldset>
 				<legend>ENTER NEW INFORMATION HERE</legend>
 				<div id="submit-box">
-					<label for="artist">Enter Artist Name:</label>
-					<input type="text" name="artist" id="artist" autofocus>
-					<p>
-						<label for="song">Enter Song Name:</label>
-						<input type="text" name="song" id="song">
-					</p>
-					<p>
-						<label for="album">Enter Album Name:</label>
-						<input type="text" name="album" id="album">
-					</p>
+					<div id="inputboxes">
+						<div class="names">
+							<label for="artist">Enter Artist Name:</label>
+						</div>
+						<div class="boxes">
+							<input type="text" name="artist" id="artist" autofocus>
+						</div>
+						<div class="names">
+							<label for="song">Enter Song Name:</label>
+						</div>
+						<div class="boxes">
+							<input type="text" name="song" id="song">
+						</div>
+						<div class="names">
+							<label for="album">Enter Album Name:</label>
+						</div>
+						<div class="boxes">
+							<input type="text" name="album" id="album">
+						</div>
+					</div>
 					<button type="button" id="addtolist">ADD INFORMATION</button>
 					<button type="button" id="closebox">CLOSE</button>
 				</div>
@@ -51,91 +77,63 @@
 		</div>
 
 
-		<div id="secondrow">	
-			<div id="redbox">
-				<form>
-					<fieldset>
-						<label for="length">Song length:</label>
-						<input type="range" name="length" step="0.1" min="0.0" max="10.0" value="0.0" oninput="counter.value=length.value">
-						<output for="length" name="counter">0.0</output>
-					</fieldset>
-					<fieldset>
-						<label for="artist">Artist:</label>
-						<select name="artist">
-							<option>Led Zeppelin</option>
-							<option>Stevie Wonder</option>
-							<option>Kraftwerk</option>
-							<option>Juice Newton</option>
-						</select>
-					</fieldset>
-					<fieldset>
-						<label for="album">Album:</label>
-						<select name="album">
-							<option>Physical Graffiti</option>
-							<option>Hotter Than July</option>
-							<option>Autobahn</option>
-							<option>Juice</option>
-						</select>
-					</fieldset>
-					<fieldset>
-						<legend>GENRE:</legend>
-						<div id="column1">
-							<input type="radio" name="genre" value="genre">Rock<br/>
-							<input type="radio" name="genre" value="genre">Pop<br/>
-							<input type="radio" name="genre" value="genre">Blues<br/>
-						</div>
-						<div id="column2">
-							<input type="radio" name="genre" value="genre">Classical<br/>
-							<input type="radio" name="genre" value="genre">Jazz<br/>
-							<input type="radio" name="genre" value="genre">Hip Hop
-						</div>
-					</fieldset>
+		<div id="secondrow" class="container-fluid">
 
-					<div class="buttoncenter">
-						<input type="submit" value="FILTER">
+			<div class="row">	
+				<div id="redbox" class="col-md-4">
+					<form>
+						<fieldset>
+							<label for="length">Song length:</label>
+							<input type="range" name="length" step="0.1" min="0.0" max="10.0" value="0.0" oninput="counter.value=length.value">
+							<output for="length" name="counter">0.0</output>
+						</fieldset>
+						<fieldset>
+							<label for="artist">Artist:</label>
+							<select id="artistOptions" name="artist">
+								<option>----</option>
+								<!-- <option>Led Zeppelin</option>
+								<option>Stevie Wonder</option>
+								<option>Kraftwerk</option>
+								<option>Juice Newton</option> -->
+							</select>
+						</fieldset>
+						<fieldset>
+							<label for="album">Album:</label>
+							<select id="albumOptions" name="album">
+								<option>----</option>
+								<!-- <option>Physical Graffiti</option>
+								<option>Hotter Than July</option>
+								<option>Autobahn</option>
+								<option>Juice</option> -->
+							</select>
+						</fieldset>
+						<fieldset>
+							<legend>GENRE:</legend>
+							<div id="column1">
+								<input type="radio" name="genre" value="genre">Rock<br/>
+								<input type="radio" name="genre" value="genre">Pop<br/>
+								<input type="radio" name="genre" value="genre">Blues<br/>
+							</div>
+							<div id="column2">
+								<input type="radio" name="genre" value="genre">Classical<br/>
+								<input type="radio" name="genre" value="genre">Jazz<br/>
+								<input type="radio" name="genre" value="genre">Hip Hop
+							</div>
+						</fieldset>
+
+						<div class="buttoncenter">
+							<input type="submit" id="filter" class="btn btn-primary" value="FILTER">
+						</div>
+
+					</form>
+				</div>
+
+				<div id="yellowboxouter" class="col-md-8">
+					<div id="yellowbox">
+<!-- 						<div id="more">
+							<button type="button" class="btn" id="morebutton">MORE SONGS</button>
+						</div> -->
 					</div>
-
-				</form>
-			</div>
-
-			<div id="yellowbox">
-<!-- 				<div class="entry">
-					<h1>Ten Years Gone</h1>
-					<ul>
-						<li>Led Zeppelin</li>
-						<li>Physical Graffiti</li>
-						<li>Rock</li>
-					</ul>
-				</div>
-
-				<div class="entry">
-					<h1>Master Blaster (Jammin')</h1>
-					<ul>
-						<li>Stevie Wonder</li>
-						<li>Hotter Than July</li>
-						<li>R&B</li>
-					</ul>
-				</div>
-
-				<div class="entry">
-					<h1>Autobahn</h1>
-					<ul>
-						<li>Kraftwerk</li>
-						<li>Autobahn</li>
-						<li>Electronic</li>
-					</ul>
-				</div>
-
-				<div class="entry">
-					<h1>Queen of Hearts</h1>
-					<ul>
-						<li>Juice Newton</li>
-						<li>Juice</li>
-						<li>Country</li>
-					</ul>
-				</div> -->
-				<div id="more">
-					<button type="button" id="morebutton">MORE SONGS</button>
 				</div>
 			</div>
 		</div>
@@ -146,9 +144,9 @@
 		&copy;2015 <a href="http://nashvillesoftwareschool.com/" target="_blank">Nashville Software School</a> &nbsp;&bull;&nbsp; Page by Michael Conrad
 	</footer>
 
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="songs.js"></script>
-	<script src="ajax.js"></script>
+	
+	<script data-main="javascripts/main" 
+         src="lib/bower_components/requirejs/require.js"></script>
 
 </body>
 </html>

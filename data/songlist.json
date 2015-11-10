@@ -1,0 +1,34 @@
+{
+  "songs": {
+    "learning": {
+      "title": "Learning To Fly",
+      "artist": "Pink Floyd",
+      "album": "Momentary Lapse of Reason"
+    },
+    "brian": {
+      "title": "Brian Wilson",
+      "artist": "Barenaked Ladies",
+      "album": "Gordon"      
+    },
+    "ocean": {
+      "title": "Walk On The Ocean",
+      "artist": "Toad the Wet Sprocket",
+      "album": "Fear"      
+    },
+    "beast": {
+      "title": "Beast of Burden",
+      "artist": "Rolling Stones",
+      "album": "Exile On Main Street"
+    },
+    "queen": {
+      "title": "Queen of Hearts",
+      "artist": "Juice Newton",
+      "album": "Juice"      
+    },
+    "ten": {
+      "title": "Ten Years Gone",
+      "artist": "Led Zeppelin",
+      "album": "Physical Graffiti"      
+    }
+  }
+}
