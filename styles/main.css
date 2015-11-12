@@ -288,9 +288,6 @@ input[type="radio"] {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
   background-color: #fff; }
 
-/* .entry :first-child {
-	font-weight: bold;
-} */
 .delete {
   float: right;
   margin-top: 5px;
@@ -353,6 +350,30 @@ footer > a:hover,
 footer > a:active {
   color: goldenrod; }
 
+/* MEDIA QUERIES */
+@media screen and (max-width: 480px) {
+  #logo {
+    font-size: 1em;
+    margin: 1.4em 0; }
+
+  #infosubmit {
+    width: 100%;
+    margin: 0;
+    padding: 6%;
+    left: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none; }
+
+  #infosubmit.appear {
+    margin-top: 60px;
+    height: 100%; }
+
+  fieldset {
+    padding-bottom: 40px; }
+
+  fieldset > legend {
+    font-size: 0.8em; } }
 @media screen and (max-width: 768px) {
   nav li, li {
     display: block;
@@ -370,5 +391,27 @@ footer > a:active {
   a:link, a:visited {
     padding: 0;
     transition: none; } }
+@media screen and (max-width: 1020px) {
+  .names {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding-right: 0; }
+
+  .boxes {
+    display: block; }
+
+  legend {
+    font-size: 1em; }
+
+  #addtolist,
+  #closebox {
+    font-size: 0.6em; }
+
+  label {
+    margin: 20px 0 0; }
+
+  #inputboxes div:first-child label {
+    margin-top: 0; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -30,23 +30,7 @@ define(["jquery", "querysongs", "entry"], function($, querysongs, entry) {
 			console.log("Your new song is ", addedSong);
 		});
 
-/*		var songDataList = populate.getSongs();
-
-		entry.songData(songDataList);*/
-
 		
 	});
-
-
-
-
-/*	return {
-		getSongs1: function(callbackFunctionReference) {
-		  	$.ajax({ url: "https://flickering-heat-1493.firebaseio.com/.json" })
-		  	.done(function(songs) {
-		  		callbackFunctionReference(songs);
-		  	});
-		}
-	};*/
 
 });

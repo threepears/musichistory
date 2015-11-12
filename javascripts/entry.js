@@ -1,4 +1,4 @@
-define(["jquery", "hbs", "populate-songs", "addsongs", "filtersongs", "querysongs"], function($, handlebars, populate, addsongs, filtersongs, querysongs) {
+define(["jquery", "hbs", "lodash", "firebase", "populate-songs", "addsongs", "deletesongs", "filtersongs", "querysongs", "hbs/handlebars"], function($, handlebars, _, firebase, populate, addsongs, deletesongs, filtersongs, querysongs, hbsFull) {
 
 
 	// Declare variables
@@ -10,10 +10,76 @@ define(["jquery", "hbs", "populate-songs", "addsongs", "filtersongs", "querysong
 	var album = $("#album");
 	var listOfSongs = [];
 	var printHandlebars = populate.songData;
+	var uniqueArtist = [];
+	var uniqueAlbum = [];
+	var songDataList;
+	
+
+	// Handlebars helper functions: filter duplicates
+	hbsFull.registerHelper('artistUnique', function(options) {
+		if (uniqueArtist.indexOf(this.artist) === -1) {
+			uniqueArtist.push(this.artist);
+			return options.fn(this);
+		}
+	});
+
+	hbsFull.registerHelper('albumUnique', function(options) {
+		if (uniqueAlbum.indexOf(this.album) === -1) {
+			uniqueAlbum.push(this.album);
+			return options.fn(this);
+		}
+	});
 
 
 	// Call first JSON document when page loads
-  	querysongs.getSongs1(printHandlebars);
+  	/*querysongs.getSongs1(printHandlebars);*/
+
+
+  	/*function getSongs() {
+		return songDataList;
+	}*/
+
+
+	var myFirebaseRef = new Firebase("https://flickering-heat-1493.firebaseio.com");
+	console.log(myFirebaseRef);
+
+	// Listen for when anything changes on the "songs" key
+	myFirebaseRef.child("songs").on("value", function(snapshot) {
+
+	  // Store the entire songs key in a local variable
+	  var allSongsObject = snapshot.val();
+	  var newSongList = {songs:allSongsObject};
+	  console.log(newSongList);
+
+	  // Bind the allSongsObject to the song list Handlebar template
+	  printHandlebars(newSongList);
+
+	  filtersongs.filterMySongs(newSongList);
+
+	  // Bind the unique artists to the artists template
+
+	  // Bind the unique albums to the albums template
+
+	});
+
+/*	getSongs1: function(callbackFunctionReference) {
+	  	$.ajax({ url: "https://flickering-heat-1493.firebaseio.com/.json" })
+	  	.done(function(songs) {
+	  		callbackFunctionReference(songs);
+	  		songDataList = songs;
+	  	});
+	},
+	getSongs: function() {
+		return songDataList;
+	}*/
+	
+
+  	$(".delete").click(function() {
+
+		console.log("Hello");
+
+	});
+
 
 
 	// Create functions
@@ -61,7 +127,7 @@ define(["jquery", "hbs", "populate-songs", "addsongs", "filtersongs", "querysong
 
 
   	// Delete album or artist from Filter Dropdown when List Entry clicked
-  	$(document).on("click", ".delete", function() {
+/*  	$(document).on("click", ".delete", function() {
   		var artistEntry = ($(this).parent());
   		var artist = $(this).parent().find("li")[0];
   		var album = $(this).parent().find("li")[1].innerHTML;
@@ -79,12 +145,12 @@ define(["jquery", "hbs", "populate-songs", "addsongs", "filtersongs", "querysong
   			}
 	  	}
 
-	/*  	for (var j = 0; j < listOfSongs.length; j++) {
+	  	for (var j = 0; j < listOfSongs.length; j++) {
 			if (artistList[i].innerHTML === listOfSongs[j][0]) {
 				listOfSongs[j].remove();
 			}
-  		}*/
-  	});
+  		}
+  	});*/
 
 
   	// Remove and add classes to show and hide main content
@@ -132,9 +198,9 @@ define(["jquery", "hbs", "populate-songs", "addsongs", "filtersongs", "querysong
       }
 	});
 
-	$(document).on("click", ".delete", function(e) {
+/*	$(document).on("click", ".delete", function(e) {
 		e.target.parentNode.remove();
-	});
+	});*/
 
 });
 
